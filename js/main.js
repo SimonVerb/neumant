@@ -108,7 +108,8 @@ const player = document.querySelector('.example__box-player'),
 playBtn = document.querySelector('.example__box-player__img'),
 audio = document.querySelector('.audio'),
 progressContainer = document.querySelector('.progress__container'),
-progress = document.querySelector('.progress')
+progress = document.querySelector('.progress'),
+imgSrc = document.querySelector('.img__src')
 
 
 
@@ -122,12 +123,14 @@ audio.addEventListener('timeupdate', updateProgress)
 
 function playSong() {
    player.classList.add('play')
+   imgSrc.src = '../images/pause.png'
    audio.play()
 }
 
 
 function pauseSong() {
    player.classList.remove('play')
+   imgSrc.src = '../images/play.png'
    audio.pause()
 }
 
